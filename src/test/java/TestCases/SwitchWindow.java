@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 import java.util.Set;
@@ -18,8 +19,8 @@ public class SwitchWindow {
 
     @Before
     public void setup() throws Exception{
-        System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\SeleniumJars\\chromedriver.exe");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\SeleniumJars\\Firefox and Gecko\\geckodriver.exe");
+        driver = new FirefoxDriver();
         baseUrl = "http://letskodeit.teachable.com/pages/practice";
         // Maximize the browser's window
         driver.manage().window().maximize();
