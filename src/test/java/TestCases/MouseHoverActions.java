@@ -48,6 +48,10 @@ import java.util.concurrent.TimeUnit;
             WebElement subElement = driver.findElement(By.xpath("//div[@class='mouse-hover-content']//a[text()='Top']"));
 
             actions.moveToElement(subElement).click().build().perform();
+
+            actions.contextClick(subElement); // This is for Right Click.
+
+            actions.doubleClick(subElement); //This is for Double Click.
         }
 
         @After
