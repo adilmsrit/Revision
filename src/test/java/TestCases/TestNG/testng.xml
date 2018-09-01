@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Regression Suite">
+<suite name="Regression Suite Adil">
     <test name="Application Test Adil">
         <classes>
             <class name="TestCases.TestNG.TestNG_TestClass1"></class>
