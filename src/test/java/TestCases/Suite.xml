@@ -1,0 +1,8 @@
+<suite>name = "Regression Suite">
+    <test name="Application Test">
+        <classes>
+            <class name="TestCases.AutoComplete"></class>
+            <class name="TestCases.DragAndDropActions"></class>
+        </classes>
+    </test>
+</suite>
