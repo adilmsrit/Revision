@@ -3,8 +3,8 @@
 <suite name="Regression Suite">
     <test name="Application Test Adil">
         <classes>
-            <class name="TestCases.AutoComplete"></class>
-            <class name="TestCases.DragAndDropActions"></class>
+            <class name="TestCases.TestNG.TestNG_TestClass1"></class>
+            <class name="TestCases.TestNG.TestNG_TestClass2"></class>
         </classes>
     </test>
 </suite>
