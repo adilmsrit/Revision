@@ -8,21 +8,25 @@ import org.testng.annotations.Test;
 public class TestNGITestResultsDemo {
 
     @Test
-    public void testMethod1(){
+    public void testMethod1() {
         System.out.println("Running --> testMethod1");
         Assert.assertTrue(false);
     }
 
     @Test
-    public void testMethod2(){
+    public void testMethod2() {
         System.out.println("Running --> testMethod2");
         Assert.assertTrue(true);
     }
 
     @AfterMethod
-    public void afterMethod(ITestResult testResult){
-        System.out.println("From the AfterMethod : "+testResult.getMethod().getMethodName());
-
+    public void afterMethod(ITestResult testResult) {
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            System.out.println("Failed: " + testResult.getMethod().getMethodName());
+        }
+        if (testResult.getStatus() == ITestResult.SUCCESS) {
+            System.out.println("Passed: " + testResult.getMethod().getMethodName());
+        }
     }
 
 }
