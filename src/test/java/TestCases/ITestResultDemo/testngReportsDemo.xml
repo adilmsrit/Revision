@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Testng Reports Suite Adil">
+    <test name="Testng Reports Test Adil">
+        <classes>
+            <class name="TestCases.ITestResultDemo.TestNGITestResultsDemo"></class>
+        </classes>
+    </test>
+</suite>

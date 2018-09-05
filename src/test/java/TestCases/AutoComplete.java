@@ -36,10 +36,6 @@ public class AutoComplete {
         WebElement element = driver.findElement(By.id("air-city-departure-menu"));
 
 
-
-
-
-
     }
 
 }
