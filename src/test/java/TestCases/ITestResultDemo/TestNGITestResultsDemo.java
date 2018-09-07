@@ -47,6 +47,4 @@ public class TestNGITestResultsDemo {
         System.out.println("Running --> testMethod2");
         Assert.assertTrue(true);
     }
-
-
 }
