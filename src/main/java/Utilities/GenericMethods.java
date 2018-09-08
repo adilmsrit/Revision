@@ -114,15 +114,20 @@ public class GenericMethods {
     }
 
     public String screenshot(String filename) throws IOException {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+       /* DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
         Date date = new Date();
-        String currentdate = dateFormat.format(date);
+        String currentdate = dateFormat.format(date);*/
 
-        filename = filename + currentdate + ".png";
-        String directory = "/test-output/ScreenShots/";
-        String destination = directory + filename;
+        System.out.println("In the screen shot directory");
+
+        filename = filename +  ".png";
+        String directory = "C:\\Users\\Mohammed.Nazeer\\IdeaProjects\\Revision\\test-output\\ScreenShots\\";
+
+
         File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(sourceFile, new File(directory + filename));
+        String destination = directory + filename;
+        System.out.println(destination);
         return destination;
     }
 
