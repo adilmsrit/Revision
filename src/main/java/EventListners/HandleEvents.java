@@ -7,7 +7,6 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class HandleEvents implements WebDriverEventListener {
 
-
     public void beforeAlertAccept(WebDriver webDriver) {
         System.out.println("Adil Implementation of :  beforeAlertAccept");
     }
