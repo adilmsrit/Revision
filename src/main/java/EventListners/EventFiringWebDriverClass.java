@@ -7,15 +7,15 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
 public class EventFiringWebDriverClass {
-    WebDriver driver;
+  WebDriver driver;
 
-    @Test
-    public void testcase() {
-        String baseUrl = "http://www.expedia.com";
-        System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\SeleniumJars\\chromedriver.exe");
-        driver = new ChromeDriver();
+  @Test
+  public void testcase() {
+    String baseUrl = "http://www.expedia.com";
+    System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\SeleniumJars\\chromedriver.exe");
+    driver = new ChromeDriver();
 
-        EventFiringWebDriver eDriver = new EventFiringWebDriver(driver);
+    EventFiringWebDriver eDriver = new EventFiringWebDriver(driver);
 
         /*HandleEvents class implements the WebDriverEventListener interface.
 
@@ -29,11 +29,11 @@ public class EventFiringWebDriverClass {
         System.out.println("Adil Implementation of :  afterAlertAccept");
             } */
 
-        //Create instance of the HandleEvents class.
-        HandleEvents handleEvents = new HandleEvents();
-        eDriver.register(handleEvents);
-
-        eDriver.get(baseUrl);
-        eDriver.findElement(By.id("tab-flight-tab-hp")).click();
-    }
+    //Create instance of the HandleEvents class.
+    HandleEvents handleEvents = new HandleEvents();
+    eDriver.register(handleEvents);
+    System.out.println("ada");
+    eDriver.get(baseUrl);
+    eDriver.findElement(By.id("tab-flight-tab-hp")).click();
+  }
 }

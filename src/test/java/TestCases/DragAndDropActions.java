@@ -1,5 +1,4 @@
 package TestCases;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,41 +8,45 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-public class DragAndDropActions {private WebDriver driver;
-    private String baseUrl;
 
-    @Before
-    public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\SeleniumJars\\Firefox and Gecko\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        baseUrl = "https://jqueryui.com/droppable/";
+import java.util.concurrent.TimeUnit;
 
-        // Maximize the browser's window
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
+public class DragAndDropActions {
+  private WebDriver driver;
+  private String baseUrl;
 
-    @Test
-    public void testDragAndDrop() throws Exception {
-        driver.get(baseUrl);
-        Thread.sleep(2000);
-        driver.switchTo().frame(0);
+  @Before
+  public void setUp() throws Exception {
+    System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\SeleniumJars\\Firefox and Gecko\\geckodriver.exe");
+    driver = new FirefoxDriver();
+    baseUrl = "https://jqueryui.com/droppable/";
 
-        WebElement fromElement = driver.findElement(By.id("draggable"));
-        WebElement toElement = driver.findElement(By.id("droppable"));
+    // Maximize the browser's window
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  }
 
-        Actions action = new Actions(driver);
+  @Test
+  public void testDragAndDrop() throws Exception {
+    driver.get(baseUrl);
+    Thread.sleep(2000);
+    driver.switchTo().frame(0);
 
-        // Drag and drop
-        //action.dragAndDrop(fromElement, toElement).build().perform();
+    WebElement fromElement = driver.findElement(By.id("draggable"));
+    WebElement toElement = driver.findElement(By.id("droppable"));
 
-        // Click and hold, move to element, release, build and perform
-        action.clickAndHold(fromElement).moveToElement(toElement).release().build().perform();
-    }
+    Actions action = new Actions(driver);
 
-    @After
-    public void tearDown() throws Exception {
-        // driver.quit();
-    }
+    // Drag and drop
+    //action.dragAndDrop(fromElement, toElement).build().perform();
+
+    // Click and hold, move to element, release, build and perform
+    action.clickAndHold(fromElement).moveToElement(toElement).release().build().perform();
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    // driver.quit();
+  }
 }
 
